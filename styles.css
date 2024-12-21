@@ -1,5 +1,6 @@
 body {
     background-color: #333;
+    color: white; /* To ensure text is visible against the dark background */
 }
 
 /* จัดกล่องโปรไฟล์ให้อยู่ในแนวนอน */
@@ -28,7 +29,6 @@ body {
         transform: translateY(-15px); /* เลื่อนขึ้น */
     }
 }
-
 
 /* สไตล์สำหรับโปรเจกต์ */
 .Project1, .Project2, .Project3 {
@@ -78,19 +78,40 @@ body {
 
 /* Media query for small screens (phones) */
 @media (max-width: 768px) {
+    body {
+        padding: 10px; /* Add some padding around the body for mobile */
+    }
+
     .profile {
         flex-direction: column; /* Stack the profile image and text vertically */
         text-align: center;
+        align-items: center; /* Ensure content is centered horizontally */
+        padding: 15px; /* Reduce padding for mobile */
     }
     
     .Project1, .Project2, .Project3 {
         flex-direction: column; /* Stack project images and text vertically */
-        align-items: center;
+        align-items: center; /* Center items in the flex container */
+        padding: 15px; /* Adjust padding for mobile */
     }
     
     .pic1 {
         width: 100%; /* Make images responsive */
         max-width: 300px; /* Ensure images don't get too large */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .profile img {
+        max-width: 100%; /* Ensure profile image scales with the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .project-item {
+        padding: 10px; /* Add some padding to the project item for mobile */
+        font-size: 14px; /* Reduce font size to make it fit better on small screens */
+    }
+
+    .project-item p {
+        font-size: 14px; /* Ensure paragraph text is also smaller on mobile */
     }
 }
-

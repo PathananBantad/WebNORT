@@ -31,7 +31,7 @@ body {
 }
 
 /* สไตล์สำหรับโปรเจกต์ */
-.Project1, .Project2, .Project3 {
+.Project1, .Project2 {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -89,7 +89,7 @@ body {
         padding: 15px; /* Reduce padding for mobile */
     }
     
-    .Project1, .Project2, .Project3 {
+    .Project1, .Project2 {
         flex-direction: column; /* Stack project images and text vertically */
         align-items: center; /* Center items in the flex container */
         padding: 15px; /* Adjust padding for mobile */

@@ -75,8 +75,7 @@ body {
     height: 500px;
     gap: 70px;   
     margin-bottom: 0;
-    margin-left: 100px;
-    
+    margin-left: 170px;
     margin-top: 50px;
     
 }
@@ -88,7 +87,7 @@ body {
     margin: 10px;
     height: 900px;
     margin-right: 10px;
-    margin-left: 200px;
+    margin-left: 170px;
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -98,7 +97,7 @@ body {
     flex: 1; 
     gap: 70px;   
     margin-bottom: 0;
-    margin-left: 61px;
+    margin-left: 290px;
     margin-top: 0px;
     
 }
@@ -187,7 +186,7 @@ body {
 .end {
     position: absolute; /* ใช้ตำแหน่งที่ตั้งแบบ absolute */
     top: 1750px;  /* กำหนดระยะห่างจากขอบบน */
-    right: 900px; /* กำหนดระยะห่างจากขอบขวา */
+    right: 800px; /* กำหนดระยะห่างจากขอบขวา */
     font-size: 24px;
     font-weight: bold;
     text-align: center;

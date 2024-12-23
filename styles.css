@@ -64,7 +64,8 @@ body {
     flex-wrap: wrap; /* ให้โปรเจกต์เปลี่ยนแถวเมื่อหน้าจอเล็ก */
     margin: 20px;
     align-items: center;
-    margin-left: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 50px;
 
 }

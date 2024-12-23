@@ -97,7 +97,7 @@ body {
     flex: 1; 
     gap: 70px;   
     margin-bottom: 0;
-    margin-left: 290px;
+    margin-left: 180px;
     margin-top: 0px;
     
 }
@@ -186,7 +186,7 @@ body {
 .end {
     position: absolute; /* ใช้ตำแหน่งที่ตั้งแบบ absolute */
     top: 1750px;  /* กำหนดระยะห่างจากขอบบน */
-    right: 800px; /* กำหนดระยะห่างจากขอบขวา */
+    right: 700px; /* กำหนดระยะห่างจากขอบขวา */
     font-size: 24px;
     font-weight: bold;
     text-align: center;

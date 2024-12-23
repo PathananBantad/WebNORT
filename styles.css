@@ -1,18 +1,44 @@
 body {
-    background-color: #333;
+    background-color: #000000;
     color: white; /* To ensure text is visible against the dark background */
+    align-items: center;
 }
 
 /* จัดกล่องโปรไฟล์ให้อยู่ในแนวนอน */
 .profile {
     display: flex;
+    flex-direction: column; /* แนวตั้ง เพื่อให้คำว่า Work Collection อยู่ใต้ภาพ */
     align-items: center;
-    gap: 20px;
+    gap: 10px; /* ระยะห่างระหว่างภาพและข้อความ */
     text-align: center;
-    margin: 20px;
     background-color: black;
-    padding: 20px;
-    border-radius: 10px;
+    font-size: 20px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* สไตล์กรอบของ Work Collection */
+.work-collection {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #000000; /* สีพื้นหลังของกรอบ */
+    display: inline-block;
+    width: 100%; /* ขนาดของกรอบให้พอดีกับขนาดของรูป */
+    text-align: center; /* จัดข้อความให้ตรงกลาง */
+}
+
+.work-collection p {
+    margin: 0;
+    font-size: 20px;
+    color: rgb(255, 255, 255); /* เปลี่ยนสีข้อความให้ชัดเจน */
+    font-weight: bold;
+}
+
+/* สไตล์สำหรับรูปภาพ */
+.profile img {
+    max-width: 100%; /* รูปภาพขยายเต็มขนาด */
+    height: auto; /* รักษาสัดส่วนภาพ */
 }
 
 /* เอฟเฟกต์เด้งเมื่อเมาส์วางบนภาพ Profile */
@@ -30,39 +56,45 @@ body {
     }
 }
 
-/* สไตล์สำหรับโปรเจกต์ */
-.Project1, .Project2 {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+
+.all {
+    display: flex; /* จัดโปรเจกต์ในแนวนอน */
+    justify-content: space-between; /* ให้แต่ละโปรเจกต์มีระยะห่าง */
+    gap: 10px; /* เพิ่มระยะห่างระหว่างโปรเจกต์ */
+    flex-wrap: wrap; /* ให้โปรเจกต์เปลี่ยนแถวเมื่อหน้าจอเล็ก */
     margin: 20px;
-    padding: 20px;
-    background-color: #444;
-    border-radius: 10px;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 50px;
+
 }
 
-/* สไตล์สำหรับข้อความในโปรเจกต์ */
-.project-item {
-    display: flex;
-    align-items: center; /* จัดข้อความให้อยู่กลางแนวตั้ง */
-    justify-content: center; /* จัดข้อความให้อยู่กลางแนวนอน */
-    text-align: center;
-    flex: 1; /* ทำให้ข้อความขยายเต็มพื้นที่ */
-    color: #fff;
+.Project1 {
+    display: flex; /* จัดรูปภาพภายใน Project1 ให้อยู่ในแถวเดียวกัน */
+    flex: 1; 
+    height: 500px;
+    gap: 70px;   
+    margin-bottom: 50px;
+    
 }
 
-.project-item p {
-    font-size: 16px;
-    margin: 0;
+.Project2 {
+    display: flex; /* จัดรูปภาพภายใน Project1 ให้อยู่ในแถวเดียวกัน */
+    flex-direction: row-reverse;
+    gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+    margin: 10px;
+    height: 900px;
+    margin-right: 20px;
 }
+
 
 /* รูปภาพ */
-.pic1 {
+.pic10, .pic11, .pic20, .pic30 {
     border-radius: 20px;
 }
 
-/* เอฟเฟกต์เด้งเมื่อเมาส์วาง */
-.pic1:hover {
+/* สำหรับรูปภาพที่ถูกวางเมาส์ */
+.pic10:hover, .pic11:hover, .pic20:hover, .pic30:hover {
     animation: bounce 0.5s ease-in-out;
 }
 
@@ -76,42 +108,62 @@ body {
     }
 }
 
+
 /* Media query for small screens (phones) */
 @media (max-width: 768px) {
     body {
-        padding: 10px; /* Add some padding around the body for mobile */
+        padding: 10px;
     }
 
+    /* ปรับการจัดเรียงใน profile */
     .profile {
-        flex-direction: column; /* Stack the profile image and text vertically */
-        text-align: center;
-        align-items: center; /* Ensure content is centered horizontally */
-        padding: 15px; /* Reduce padding for mobile */
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
     }
-    
+
+    .work-collection p {
+        font-size: 18px;
+    }
+
+    .all {
+        flex-direction: column; /* ให้โปรเจกต์ทุกตัวอยู่ในแถวเดียว */
+        margin-left: 0; /* ลบระยะห่างจากซ้าย */
+        margin-top: 20px; /* ลดระยะห่างด้านบน */
+    }
+
+    /* ปรับขนาดของ Project1, Project2 */
     .Project1, .Project2 {
-        flex-direction: column; /* Stack project images and text vertically */
-        align-items: center; /* Center items in the flex container */
-        padding: 15px; /* Adjust padding for mobile */
+        width: 100%;
+        padding: 10px;
+        gap: 20px;
     }
-    
-    .pic1 {
-        width: 100%; /* Make images responsive */
-        max-width: 300px; /* Ensure images don't get too large */
-        height: auto; /* Maintain aspect ratio */
+
+    .pic10, .pic11, .pic20, .pic30 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .profile img {
-        max-width: 100%; /* Ensure profile image scales with the container */
-        height: auto; /* Maintain aspect ratio */
-    }
-    
-    .project-item {
-        padding: 10px; /* Add some padding to the project item for mobile */
-        font-size: 14px; /* Reduce font size to make it fit better on small screens */
-    }
-
-    .project-item p {
-        font-size: 14px; /* Ensure paragraph text is also smaller on mobile */
+        max-width: 100%;
     }
 }
+
+.nav {
+    position: sticky;
+    top: 0; /* ตำแหน่งของ navigation bar เมื่อ scroll */
+    background-color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px; /* เพิ่มระยะห่างด้านล่างของ navigation bar */
+    z-index: 1000; /* เพื่อให้ navigation bar อยู่ด้านบน */
+    width: 100%; /* ให้ navigation bar ขยายเต็มหน้าจอ */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+.north {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
